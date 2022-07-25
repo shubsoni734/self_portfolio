@@ -1,0 +1,24 @@
+.app {
+  height: 100vh;
+
+  .section {
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: lightsalmon;
+    position: relative;
+    top: 70px;
+    scroll-behavior: smooth;
+    //for go top of the every page
+    scroll-snap-type: y mandatory;
+    //for eremove scroll bar
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    > * {
+      width: 100vw;
+      height: calc(100vh - 70px);
+      scroll-snap-align: start;
+    }
+  }
+}
